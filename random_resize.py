@@ -18,7 +18,8 @@ def resize(path, out_path="export"):
                 for i in range(10):
                     r_size = generate_size(size)
                     t_pic = pic.resize(r_size)
-                    t_pic.save(join(out_path, str(i) + filename))
+                    prefix = str(r_size[0]) + "*" + str(r_size[1])
+                    t_pic.save(join(out_path, prefix + "_" + filename))
 
 
 def generate_size(size):
